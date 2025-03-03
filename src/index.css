@@ -1,7 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme{
+    --color-brand: #FFFF00
+}
+
 
 .width{
     @apply w-10/12 mx-auto
+}
+.heading{
+    @apply text-4xl md:text-6xl font-bold text-brand
+}
+.herodesc{
+    @apply text-lg md:text-2xl font-semibold tracking-wider
 }

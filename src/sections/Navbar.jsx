@@ -4,7 +4,7 @@ import Button from '../component/Button';
 function Navbar() {
   return (
     <>
-      <div className="navbar  width">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -76,7 +76,7 @@ function Navbar() {
           <Button
             type="button"
             text="Contact Us"
-            className="hidden md:block btn rounded-4xl bg-[#FFFF00] border-2 border-amber-200"
+            className="hidden md:block btn rounded-4xl bg-brand border-2 border-amber-200"
           />
         </div>
       </div>
