@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+
+.width{
+    @apply w-10/12 mx-auto
+}
