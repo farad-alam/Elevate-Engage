@@ -10,7 +10,7 @@ function HeroStaticCard({icon, title, desc}) {
           {icon}
         </div>
         <div className="tittles">
-          <p className=" font-semibold">{title}</p>
+          <p className="font-semibold">{title}</p>
         </div>
         <div className="descriptions text-center w-[74px]">
           <p className="text-[10px] text-gray-600">{desc}</p>

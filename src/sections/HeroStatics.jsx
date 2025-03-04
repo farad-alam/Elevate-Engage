@@ -8,8 +8,8 @@ import {
 function HeroStatics() {
   return (
     <div
-      className="absolute left-3/12 top-9/12
-      flex justify-between gap-2
+      className="absolute left-3/12 top-9/12 hidden
+      md:flex justify-between gap-2
      p-2 bg-slate-950/20 backdrop-blur-3xl rounded-lg"
     >
       <HeroStaticCard

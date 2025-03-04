@@ -10,18 +10,17 @@ function Header() {
           <div className="w-72 h-72 bg-indigo-500 bg-blur blur-[100px] top-28"></div>
           <div className="w-52 h-42 opacity-80 bg-brand bg-blur blur-[100px] right-0 bottom-0"></div>
           <div className="w-52 h-42 opacity-60 bg-brand bg-blur blur-[100px] left-0 bottom-0"></div>
-          <div id="dotedimg" className="">
-            <img
-              src="/doted.png"
-              className="bg-blur bottom-0 right-0 w-28"
-              alt=""
-            />
-          </div>
-
           <Navbar />
           <Hero />
         </div>
       </header>
+      <div id="dotedimg" className="">
+        <img
+          src="/doted.png"
+          className="bg-blur bottom-12 -right-24 w-46 md:-bottom-8 md:-right-28 md:w-62"
+          alt=""
+        />
+      </div>
       {/* <section className="w-full h-52 bg-amber-50"></section> */}
     </>
   );

@@ -5,7 +5,7 @@ import HeroStatics from './HeroStatics';
 
 function Hero() {
   return (
-    <div className='flex md:flex-wrap lg:flex-nowrap gap-8 justify-between items-center mt-10'>
+    <div className='flex flex-wrap md:flex-nowrap gap-8 justify-between items-center mt-10'>
       <HeroContent />
       <HeroBanar />
       <HeroStatics />

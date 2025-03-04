@@ -3,7 +3,7 @@ import Button from "../component/Button";
 
 function HeroContent() {
   return (
-      <div className="space-y-12">
+      <div className="space-y-6 md:space-y-12 ">
         <div id="herotitle">
           <h1 className="heading">Elevate</h1>
           <p className="herodesc">Your Business With Instagram</p>
