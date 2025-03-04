@@ -20,3 +20,15 @@
 .bg-blur{
     @apply absolute -z-[1] rounded-full 
 }
+
+.section{
+    @apply py-17
+}
+.subtitle{
+    @apply text-2xl md:text-5xl font-bold text-center pb-12
+}
+
+.service-card-hover{
+    @apply duration-500 hover:scale-105 hover:rotate-2 hover:shadow-indigo-600 hover:shadow-2xl
+}
+
