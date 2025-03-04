@@ -8,7 +8,7 @@ function ServiceCard({ icon, title, desc }) {
     >
       {icon}
       <h4 className="text-md font-semibold">{title}</h4>
-      <p className="text-sm text-slate-600">{desc}</p>
+      <p className="text-sm text-slate-600 leading-tight">{desc}</p>
     </div>
   );
 }
