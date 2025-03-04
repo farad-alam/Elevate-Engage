@@ -8,9 +8,9 @@ import {
 function HeroStatics() {
   return (
     <div
-      className="absolute left-2/6 top-3/4 w-80
+      className="absolute left-3/12 top-9/12
       flex justify-between gap-2
-     p-4 bg-slate-950/40 backdrop-blur-3xl rounded-lg"
+     p-2 bg-slate-950/20 backdrop-blur-3xl rounded-lg"
     >
       <HeroStaticCard
         icon={<PencilSquareIcon className="size-6" />}
