@@ -2,8 +2,8 @@ import React from 'react'
 
 function HeroBanar() {
   return (
-    <div className='flex '>
-      <img src="/Elevate Banar.png" className='w-8/12' alt="" />
+    <div className='flex lg:justify-center'>
+      <img src="/Elevate Banar.png" className='w-9/12 h-auto object-contain' alt="" />
     </div>
   );
 }
