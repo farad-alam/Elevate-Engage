@@ -1,0 +1,44 @@
+[
+  {
+    "packageTitle": "Starter Growth",
+    "packageDescription": "Perfect for individuals looking to kickstart their Instagram growth.",
+    "packageFeatureList": [
+      "500+ real followers per month",
+      "Targeted audience engagement",
+      "Hashtag optimization",
+      "Basic analytics report",
+      "Email support"
+    ],
+    "price": 29,
+    "buttonTxt":"Take Package",
+    "isMain": false
+  },
+  {
+    "packageTitle": "Pro Growth",
+    "packageDescription": "Best for influencers and businesses looking for steady and strong growth.",
+    "packageFeatureList": [
+      "1,500+ real followers per month",
+      "Advanced audience targeting",
+      "Hashtag and content strategy",
+      "Detailed growth analytics",
+      "Priority email & chat support"
+    ],
+    "price": 79,
+    "buttonTxt":"Take Package",
+    "isMain": true
+  },
+  {
+    "packageTitle": "Elite Growth",
+    "packageDescription": "Ultimate package for brands and influencers aiming for top-tier engagement.",
+    "packageFeatureList": [
+      "3,000+ real followers per month",
+      "Dedicated account manager",
+      "Advanced content strategy",
+      "Competitor analysis",
+      "24/7 premium support"
+    ],
+    "price": 149,
+    "buttonTxt": "Take Package",
+    "isMain": false
+  }
+]

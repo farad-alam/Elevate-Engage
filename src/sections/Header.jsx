@@ -14,13 +14,13 @@ function Header() {
           <Hero />
         </div>
       </header>
-      <div id="dotedimg" className="">
+      {/* <div id="dotedimg" className="">
         <img
           src="/doted.png"
           className="bg-blur bottom-12 -right-24 w-46 md:-bottom-8 md:-right-28 md:w-62"
           alt=""
         />
-      </div>
+      </div> */}
       {/* <section className="w-full h-52 bg-amber-50"></section> */}
     </>
   );
