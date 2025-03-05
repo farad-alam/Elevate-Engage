@@ -36,7 +36,13 @@
     @apply border-2 border-indigo-500 scale-105 shadow-md shadow-indigo-500
 }
 .child-pricing-card{
-    @apply border-1 border-slate-500 shadow-md
+    @apply border-1 border-slate-500 shadow-md 
+}
+.main-pricing-btn{
+    @apply bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700
+}
+.child-pricing-btn{
+    @apply bg-gray-800 hover:bg-gray-700 active:bg-gray-600
 }
 .pricing-card-hover{
     @apply hover:scale-110 duration-500 hover:shadow-2xl hover:shadow-indigo-500
