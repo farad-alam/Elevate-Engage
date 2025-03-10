@@ -1,12 +1,13 @@
 import React from "react";
+import Input from "../component/Input";
 
 function Contact() {
   return (
     <section className="bg-neutral-900 border-b-1 border-gray-800">
-      <div className="section width ">
-        <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
-          <div className="max-w-3xl mb-10 lg:mb-14">
-            <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
+      <div className="section width">
+        <div className="">
+          <div className="lg:mb-8">
+            <h2 className="text-white font-semibold text-2xl md:text-4xl leading-tight">
               Contact us
             </h2>
             <p className="mt-1 text-neutral-400">
@@ -18,140 +19,11 @@ function Contact() {
             <div className="md:order-2 border-b border-neutral-800 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
               <form>
                 <div className="space-y-4">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="hs-tac-input-name"
-                      className="peer p-3 sm:p-4 block w-full bg-neutral-800 border-transparent rounded-lg sm:text-sm text-white placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                focus:pt-6
-                focus:pb-2
-                not-placeholder-shown:pt-6
-                not-placeholder-shown:pb-2
-                autofill:pt-6
-                autofill:pb-2"
-                      placeholder="Name"
-                    />
-                    <label
-                      for="hs-tac-input-name"
-                      className="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-not-placeholder-shown:text-xs
-                    peer-not-placeholder-shown:-translate-y-1.5
-                    peer-not-placeholder-shown:text-neutral-400"
-                    >
-                      Name
-                    </label>
-                  </div>
-
-                  <div className="relative">
-                    <input
-                      type="email"
-                      id="hs-tac-input-email"
-                      className="peer p-3 sm:p-4 block w-full bg-neutral-800 border-transparent rounded-lg sm:text-sm text-white placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                focus:pt-6
-                focus:pb-2
-                not-placeholder-shown:pt-6
-                not-placeholder-shown:pb-2
-                autofill:pt-6
-                autofill:pb-2"
-                      placeholder="Email"
-                    />
-                    <label
-                      for="hs-tac-input-email"
-                      className="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-not-placeholder-shown:text-xs
-                    peer-not-placeholder-shown:-translate-y-1.5
-                    peer-not-placeholder-shown:text-neutral-400"
-                    >
-                      Email
-                    </label>
-                  </div>
-
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="hs-tac-input-company"
-                      className="peer p-3 sm:p-4 block w-full bg-neutral-800 border-transparent rounded-lg sm:text-sm text-white placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                focus:pt-6
-                focus:pb-2
-                not-placeholder-shown:pt-6
-                not-placeholder-shown:pb-2
-                autofill:pt-6
-                autofill:pb-2"
-                      placeholder="Company"
-                    />
-                    <label
-                      for="hs-tac-input-company"
-                      className="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-not-placeholder-shown:text-xs
-                    peer-not-placeholder-shown:-translate-y-1.5
-                    peer-not-placeholder-shown:text-neutral-400"
-                    >
-                      Company
-                    </label>
-                  </div>
-
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="hs-tac-input-phone"
-                      className="peer p-3 sm:p-4 block w-full bg-neutral-800 border-transparent rounded-lg sm:text-sm text-white placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                focus:pt-6
-                focus:pb-2
-                not-placeholder-shown:pt-6
-                not-placeholder-shown:pb-2
-                autofill:pt-6
-                autofill:pb-2"
-                      placeholder="Phone"
-                    />
-                    <label
-                      for="hs-tac-input-phone"
-                      className="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-not-placeholder-shown:text-xs
-                    peer-not-placeholder-shown:-translate-y-1.5
-                    peer-not-placeholder-shown:text-neutral-400"
-                    >
-                      Phone
-                    </label>
-                  </div>
-
-                  <div className="relative">
-                    <textarea
-                      id="hs-tac-message"
-                      className="peer p-3 sm:p-4 block w-full bg-neutral-800 border-transparent rounded-lg sm:text-sm text-white placeholder:text-transparent focus:outline-hidden focus:ring-0 focus:border-transparent disabled:opacity-50 disabled:pointer-events-none
-                focus:pt-6
-                focus:pb-2
-                not-placeholder-shown:pt-6
-                not-placeholder-shown:pb-2
-                autofill:pt-6
-                autofill:pb-2"
-                      placeholder="This is a textarea placeholder"
-                      data-hs-textarea-auto-height
-                    ></textarea>
-                    <label
-                      for="hs-tac-message"
-                      className="absolute top-0 start-0 p-3 sm:p-4 h-full text-neutral-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
-                    peer-focus:text-xs
-                    peer-focus:-translate-y-1.5
-                    peer-focus:text-neutral-400
-                    peer-not-placeholder-shown:text-xs
-                    peer-not-placeholder-shown:-translate-y-1.5
-                    peer-not-placeholder-shown:text-neutral-400"
-                    >
-                      Tell us about your project
-                    </label>
-                  </div>
+                  <Input type="text" label="Name" />
+                  <Input type="email" label="Email" />
+                  <Input type="text" label="Company" />
+                  <Input type="number" label="Phone" />
+                  <Input type="message" label="Tell Us About Your Project" />
                 </div>
 
                 <div className="mt-2">
@@ -185,7 +57,7 @@ function Contact() {
                 </div>
               </form>
             </div>
-
+            {/* Details */}
             <div className="space-y-14">
               <div className="flex gap-x-5">
                 <svg
@@ -207,9 +79,8 @@ function Contact() {
                   <h4 className="text-white font-semibold">Our address:</h4>
 
                   <address className="mt-1 text-neutral-400 text-sm not-italic">
-                    300 Bath Street, Tay House
-                    <br />
-                    Glasgow G2 4JR, United Kingdom
+                    1st Floor, Afroza Tower, <br /> Uposhohor Newmarket, <br /> Rajshahi-6202,
+                    Bangladesh
                   </address>
                 </div>
               </div>
