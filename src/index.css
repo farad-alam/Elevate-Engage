@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
-@import "./node_modules/preline/variants.css";
+@import "../node_modules/preline/variants.css";
 @plugin "daisyui";
-@plugin "@tailwindcss/forms";
+/* @plugin "@tailwindcss/forms"; */
 
 @theme{
     --font-open-sans: "Open Sans", sans-serif;
