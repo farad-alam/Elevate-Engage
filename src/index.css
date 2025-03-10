@@ -29,7 +29,7 @@
 }
 
 .service-card-hover{
-    @apply duration-500 hover:scale-105 hover:rotate-2 hover:shadow-indigo-600 hover:shadow-2xl
+    @apply duration-500 hover:scale-105 hover:rotate-2  hover:shadow-2xl
 }
 
 .main-pricing-card{

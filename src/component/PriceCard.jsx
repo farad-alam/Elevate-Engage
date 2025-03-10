@@ -1,6 +1,7 @@
 import { CheckBadgeIcon, CheckIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import PriceCardFeature from "./PriceCardFeature";
+import Test from "../sections/test";
 
 function PriceCard({
   packageTitle,
@@ -65,6 +66,7 @@ function PriceCard({
           >
             {buttonTxt}
           </a>
+          
         </div>
       </div>
     </>

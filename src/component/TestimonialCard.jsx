@@ -1,6 +1,12 @@
 import React from "react";
 
-function TestimonialCard({ feedback, userImg, userName, userDesignation, userId:ratingId }) {
+function TestimonialCard({
+  feedback,
+  userImg,
+  userName,
+  userDesignation,
+  userId: ratingId,
+}) {
   return (
     <>
       <div className="flex flex-col overflow-hidden shadow-xl rounded-xl service-card-hover">
