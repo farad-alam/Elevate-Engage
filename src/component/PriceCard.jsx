@@ -35,7 +35,7 @@ function PriceCard({
             {packageTitle}
           </div>
 
-          <p className="mx-auto mb-8 px-8 text-center text-gray-500">
+          <p className="mx-auto mb-8 px-8 text-sm text-center text-gray-500">
             {/*Package Description */}
             {packageDescription}
           </p>
