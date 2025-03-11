@@ -18,10 +18,10 @@ function Pricing() {
 
   return (
     <>
-      <section>
+      <section data-theme="" className="bg-base-100 text-base-content">
         <div className="width section">
           <h2 className="subtitle">Our plans for you</h2>
-          <div className="bg-white py-6 sm:py-8 lg:py-12">
+          <div className="py-6 sm:py-8 lg:py-12">
             <div className="mx-auto max-w-screen-xl px-4 md:px-8">
               <div className="mb-6 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 lg:gap-8">
                 {packageData.map((packages, index) => {

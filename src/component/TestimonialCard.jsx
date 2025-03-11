@@ -10,7 +10,7 @@ function TestimonialCard({
   return (
     <>
       <div className="flex flex-col overflow-hidden shadow-xl rounded-xl service-card-hover">
-        <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+        <div className="flex flex-col justify-between flex-1 p-6 bg-base-100 dark:bg-neutral-900 shadow text-base-content lg:py-8 lg:px-7">
           {/* User Feedback */}
           <div className="flex-1">
             <div className="rating rating-sm">
@@ -48,7 +48,7 @@ function TestimonialCard({
             </div>
 
             <blockquote className="flex-1 mt-8">
-              <p className="text-lg leading-relaxed text-gray-900 font-pj">
+              <p className="text-lg leading-relaxed">
                 {feedback}
                 {/* “You made it so simple. My new site is so much faster and easier
                 to work with than my old site. I just choose the page, make the
@@ -65,10 +65,8 @@ function TestimonialCard({
               alt=""
             />
             <div className="ml-4">
-              <p className="text-base font-bold text-gray-900 font-pj">
-                {userName}
-              </p>
-              <p className="mt-0.5 text-sm font-pj text-gray-600">
+              <p className="text-base font-bold text-lighter">{userName}</p>
+              <p className="mt-0.5 text-sm font-pj text-lightest">
                 {userDesignation}
               </p>
             </div>

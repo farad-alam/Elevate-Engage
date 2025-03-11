@@ -7,9 +7,9 @@ import { MdOutlineCreateNewFolder } from "react-icons/md";
 
 function Services() {
   return (
-    <section className="bg-indigo-50">
+    <section className="bg-base-100">
       <div id="services" className="width section">
-        <h2 className="subtitle">Our Services</h2>
+        <h2 className="subtitle mb-12 text-center">Our Services</h2>
         <div id="service-cards" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ServiceCard
             icon={<ChartBarIcon className="size-8" color="indigo" />}

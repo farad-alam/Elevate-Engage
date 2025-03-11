@@ -15,7 +15,7 @@ function PriceCard({
     <>
       {/* ------------------------------------------------------------->>>>>>>>> */}
       <div
-        className={`relative flex flex-col rounded-lg   ${
+        className={`relative bg-base-200 flex flex-col rounded-lg   ${
           isMain ? "main-pricing-card" : "child-pricing-card"
         } p-4 pt-6  pricing-card-hover`}
       >
@@ -31,12 +31,12 @@ function PriceCard({
             </>
           )}
 
-          <div className="mb-2 text-center text-2xl font-bold text-gray-800">
+          <div className="mb-2 text-center text-2xl font-bold ">
             {/* Package Title */}
             {packageTitle}
           </div>
 
-          <p className="mx-auto mb-8 px-8 text-sm text-center text-gray-500">
+          <p className="mx-auto mb-8 px-8 text-sm text-center text-lighter">
             {/*Package Description */}
             {packageDescription}
           </p>
@@ -55,9 +55,9 @@ function PriceCard({
         {/* Package Pricing */}
         <div className="mt-auto flex flex-col gap-8">
           <div className="flex items-end justify-center gap-1">
-            <span className="self-start text-gray-600">$</span>
-            <span className="text-4xl font-bold text-gray-800">{price}</span>
-            <span className="text-gray-500">/month</span>
+            <span className="self-start text-lighter">$</span>
+            <span className="text-4xl font-bold ">{price}</span>
+            <span className="text-lighter">/month</span>
           </div>
 
           <a
@@ -66,7 +66,6 @@ function PriceCard({
           >
             {buttonTxt}
           </a>
-          
         </div>
       </div>
     </>

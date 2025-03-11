@@ -5,7 +5,7 @@ function PriceCardFeature({feature}) {
     <>
       <div className="flex gap-2">
         <CheckIcon className="size-5 text-indigo-600 stroke-2" />
-        <span className="text-gray-600">{feature}</span>
+        <span className="">{feature}</span>
       </div>
     </>
   );

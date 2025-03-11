@@ -4,7 +4,7 @@ import { FaServicestack } from 'react-icons/fa'
 
 function AditionaServices() {
   return (
-    <section className='bg-yellow-50'>
+    <section className='bg-base-200'>
         <div className='width section'>
             <h2 className='subtitle'>Aditional Services</h2>
             <div id="aditional-service" className='flex flex-col justify-between gap-8'>

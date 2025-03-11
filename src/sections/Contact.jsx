@@ -3,16 +3,14 @@ import Input from "../component/Input";
 
 function Contact() {
   return (
-    <section className="bg-neutral-900 border-b-1 border-gray-800">
+    <section className="bg-base-200 text-base-content border-b-1 border-gray-800">
       <div className="section width">
         <div className="">
           <div className="lg:mb-8">
-            <h2 className="text-white font-semibold text-2xl md:text-4xl leading-tight">
+            <h2 className="subtitle leading-tight">
               Contact us
             </h2>
-            <p className="mt-1 text-neutral-400">
-              Whatever your goal - we will get you there.
-            </p>
+            <p className="mt-1 text-lighter">Whatever your goal - we will get you there.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
@@ -76,11 +74,11 @@ function Contact() {
                   <circle cx="12" cy="10" r="3" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">Our address:</h4>
+                  <h4 className="font-semibold text-light">Our address:</h4>
 
-                  <address className="mt-1 text-neutral-400 text-sm not-italic">
-                    1st Floor, Afroza Tower, <br /> Uposhohor Newmarket, <br /> Rajshahi-6202,
-                    Bangladesh
+                  <address className="mt-1 text-sm not-italic text-lighter">
+                    1st Floor, Afroza Tower, <br /> Uposhohor Newmarket, <br />{" "}
+                    Rajshahi-6202, Bangladesh
                   </address>
                 </div>
               </div>
@@ -102,10 +100,10 @@ function Contact() {
                   <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">Email us:</h4>
+                  <h4 className=" font-semibold text-light">Email us:</h4>
 
                   <a
-                    className="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-hidden focus:text-neutral-200"
+                    className="mt-1  text-sm text-lighter focus:outline-hidden focus:text-neutral-200"
                     href="#mailto:example@site.co"
                     target="_blank"
                   >
@@ -131,8 +129,8 @@ function Contact() {
                   <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
                 </svg>
                 <div className="grow">
-                  <h4 className="text-white font-semibold">We're hiring</h4>
-                  <p className="mt-1 text-neutral-400">
+                  <h4 className="font-semibold text-light">We're hiring</h4>
+                  <p className="mt-1 text-lighter">
                     We're thrilled to announce that we're expanding our team and
                     looking for talented individuals like you to join us.
                   </p>

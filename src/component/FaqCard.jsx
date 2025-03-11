@@ -1,6 +1,6 @@
 import React from "react";
 
-function FaqCard({question, answer}) {
+function FaqCard({ question, answer }) {
   return (
     <>
       <div
@@ -8,7 +8,7 @@ function FaqCard({question, answer}) {
         id="hs-basic-with-title-and-arrow-stretched-heading-five"
       >
         <button
-          class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+          class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-700 rounded-lg transition hover:text-gray-400 focus:outline-hidden focus:text-gray-500 dark:text-neutral-300 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
           aria-expanded="false"
           aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five"
         >
@@ -48,9 +48,7 @@ function FaqCard({question, answer}) {
           role="region"
           aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-five"
         >
-          <p class="text-gray-600 dark:text-neutral-400">
-            {answer}
-          </p>
+          <p class="text-gray-600 dark:text-neutral-400">{answer}</p>
         </div>
       </div>
     </>
