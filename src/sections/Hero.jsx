@@ -8,7 +8,7 @@ function Hero() {
     <div className='flex flex-wrap md:flex-nowrap gap-8 justify-between items-center mt-10'>
       <HeroContent />
       <HeroBanar />
-      <HeroStatics />
+      {/* <HeroStatics /> */}
     </div>
   );
 }

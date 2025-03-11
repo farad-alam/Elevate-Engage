@@ -6,12 +6,12 @@ function HeroContent() {
       <div className="space-y-6 md:space-y-12 ">
         <div id="herotitle">
           <h1 className="heading">Elevate</h1>
-          <p className="herodesc">Your Business With Instagram</p>
+          <p className="herodesc text-light">Your Business With Instagram</p>
           {/* <p className="herodesc"></p> */}
           <h1 className="heading">Engage</h1>
         </div>
         <div id="herodescription" className="w-8/12">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-light">
             Elevate Your Presence, Boost Engagement, and Dominate Instagram &
             TikTok!
           </p>
