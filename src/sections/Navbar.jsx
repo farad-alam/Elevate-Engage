@@ -80,7 +80,7 @@ function Navbar() {
           <Button
             type="button"
             text="Contact Us"
-            className="hidden md:block btn rounded-4xl bg-brand text-black border-none btnhover"
+            className=" bg-brand text-black my-btn btnhover"
           />
         </div>
       </div>
