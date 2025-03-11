@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Aurora from "../DesignComponent/Aurora";
+import SplashCursor from "../DesignComponent/SplashCursor";
 
 // 4f39f6
 
@@ -17,6 +18,7 @@ function Header() {
             speed={0.3}
           />
         </div>
+        {/* <SplashCursor /> */}
         <section
           id="header"
           className="width bg-[url('/bggrid.png')] bg-cover bg-top"
