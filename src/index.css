@@ -1,67 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 @import "../node_modules/preline/variants.css";
 @plugin "daisyui";
 /* @plugin "@tailwindcss/forms"; */
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-@theme{
-    --font-open-sans: "Open Sans", sans-serif;
-    --color-brand: #FFFF00
+@theme {
+  --font-open-sans: "Open Sans", sans-serif;
+  --color-brand: #ffff00;
 }
 
-
-.width{
-    @apply w-10/12 mx-auto
+.width {
+  @apply w-10/12 mx-auto;
 }
-.heading{
-    @apply text-4xl md:text-6xl font-bold text-brand
+.heading {
+  @apply text-4xl md:text-6xl lg:text-8xl font-bold text-brand;
 }
-.herodesc{
-    @apply text-[16px] md:text-xl font-semibold
+.herodesc {
+  @apply text-[16px] md:text-xl font-semibold;
 }
-.bg-blur{
-    @apply absolute -z-[1] rounded-full 
+.bg-blur {
+  @apply absolute -z-[1] rounded-full;
 }
-
-.section{
-    @apply py-17
+.btnhover {
+  @apply hover:scale-105 hover:shadow duration-500
 }
-.section-bg-dark{
-    @apply dark:bg-neutral-900
+.section {
+  @apply py-17;
 }
-.subtitle{
-    @apply text-2xl md:text-4xl font-bold 
+.section-bg-dark {
+  @apply dark:bg-neutral-900;
 }
-
-.text-light{
-    @apply text-gray-700 dark:text-gray-300
-}
-.text-lighter{
-    @apply text-gray-600 dark:text-gray-500
-}
-.text-lightest{
-    @apply text-gray-500 dark:text-gray-600
+.subtitle {
+  @apply text-2xl md:text-4xl font-bold;
 }
 
-.service-card-hover{
-    @apply duration-500 hover:scale-105 hover:rotate-2  hover:shadow-2xl hover:shadow-indigo-500
+.text-light {
+  @apply text-gray-700 dark:text-gray-300;
+}
+.text-lighter {
+  @apply text-gray-600 dark:text-gray-500;
+}
+.text-lightest {
+  @apply text-gray-500 dark:text-gray-600;
 }
 
-.main-pricing-card{
-    @apply border-2 border-indigo-500 scale-105 shadow-md shadow-indigo-500
-}
-.child-pricing-card{
-    @apply border-1 border-slate-500 shadow-md 
-}
-.main-pricing-btn{
-    @apply bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700
-}
-.child-pricing-btn{
-    @apply bg-gray-800 hover:bg-gray-700 active:bg-gray-600
-}
-.pricing-card-hover{
-    @apply hover:scale-110 duration-500 hover:shadow-2xl hover:shadow-indigo-500
+.service-card-hover {
+  @apply duration-500 hover:scale-105 hover:rotate-2  hover:shadow-2xl hover:shadow-indigo-500;
 }
 
-
+.main-pricing-card {
+  @apply border-2 border-indigo-500 scale-105 shadow-md shadow-indigo-500;
+}
+.child-pricing-card {
+  @apply border-1 border-slate-500 shadow-md;
+}
+.main-pricing-btn {
+  @apply bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700;
+}
+.child-pricing-btn {
+  @apply bg-gray-800 hover:bg-gray-700 active:bg-gray-600;
+}
+.pricing-card-hover {
+  @apply hover:scale-110 duration-500 hover:shadow-2xl hover:shadow-indigo-500;
+}

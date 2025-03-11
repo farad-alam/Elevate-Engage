@@ -18,7 +18,7 @@ function Input({ type, label }) {
             data-hs-textarea-auto-height
           ></textarea>
           <label
-            for="hs-tac-message"
+            htmlFor="hs-tac-message"
             className="absolute top-0 start-0 p-3 sm:p-4 h-full text-gray-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                         peer-focus:text-xs
                         peer-focus:-translate-y-1.5
@@ -45,7 +45,7 @@ function Input({ type, label }) {
             placeholder={label}
           />
           <label
-            for={`hs-tac-input-${label.toLowerCase()}`}
+            htmlFor={`hs-tac-input-${label.toLowerCase()}`}
             className="absolute top-0 start-0 p-3 sm:p-4 h-full text-gray-400 text-sm truncate pointer-events-none transition ease-in-out duration-100 border border-transparent peer-disabled:opacity-50 peer-disabled:pointer-events-none
                             peer-focus:text-xs
                             peer-focus:-translate-y-1.5

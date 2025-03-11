@@ -48,7 +48,11 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <img src="/elevate_engage_logo.jpg" alt="" className='w-12 rounded-xl' />
+          <img
+            src="/elevate_engage_logo.jpg"
+            alt=""
+            className="w-12 rounded-xl"
+          />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -76,7 +80,7 @@ function Navbar() {
           <Button
             type="button"
             text="Contact Us"
-            className="hidden md:block btn rounded-4xl bg-brand border-2 border-amber-200"
+            className="hidden md:block btn rounded-4xl bg-brand text-black border-none btnhover"
           />
         </div>
       </div>

@@ -1,11 +1,11 @@
-import React from 'react'
-import HeroContent from './HeroContent'
-import HeroBanar from './HeroBanar'
-import HeroStatics from './HeroStatics';
+import React from "react";
+import HeroContent from "./HeroContent";
+import HeroBanar from "./HeroBanar";
+import HeroStatics from "./HeroStatics";
 
 function Hero() {
   return (
-    <div className='flex flex-wrap md:flex-nowrap gap-8 justify-between items-center mt-10'>
+    <div className="flex flex-wrap md:flex-nowrap gap-8 justify-between items-center mt-10">
       <HeroContent />
       <HeroBanar />
       {/* <HeroStatics /> */}
@@ -13,4 +13,4 @@ function Hero() {
   );
 }
 
-export default Hero
+export default Hero;
