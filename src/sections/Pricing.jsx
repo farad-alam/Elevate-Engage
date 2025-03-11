@@ -20,20 +20,22 @@ function Pricing() {
     <>
       <section data-theme="" className="bg-base-100 text-base-content">
         <div className="width section">
-          <h2 className="subtitle">Our plans for you</h2>
+          <h2 className="subtitle text-center mb-14">Our plans for you</h2>
           <div className="py-6 sm:py-8 lg:py-12">
             <div className="mx-auto max-w-screen-xl px-4 md:px-8">
               <div className="mb-6 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 lg:gap-8">
                 {packageData.map((packages, index) => {
-                  return <PriceCard 
-                    key={index}
-                    packageTitle={packages.packageTitle}
-                    packageDescription={packages.packageDescription}
-                    packageFeatureList={packages.packageFeatureList}
-                    price={packages.price}
-                    buttonTxt={packages.buttonTxt}
-                    isMain={packages.isMain}
-                  />;
+                  return (
+                    <PriceCard
+                      key={index}
+                      packageTitle={packages.packageTitle}
+                      packageDescription={packages.packageDescription}
+                      packageFeatureList={packages.packageFeatureList}
+                      price={packages.price}
+                      buttonTxt={packages.buttonTxt}
+                      isMain={packages.isMain}
+                    />
+                  );
                 })}
               </div>
               {/* Nedd help to Decide */}
