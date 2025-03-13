@@ -11,12 +11,12 @@ function Header() {
     <>
       <header data-theme="dark" className="relative mb-12 bg-transparent">
         <div className="absolute -z-10 w-full h-[500px]">
-          <Aurora
+          {/* <Aurora
             colorStops={["#00D8FF", "#00D8FF", "#00D8FF"]}
             blend={0.8}
             amplitude={0.9}
             speed={0.3}
-          />
+          /> */}
         </div>
         {/* <SplashCursor /> */}
         <section

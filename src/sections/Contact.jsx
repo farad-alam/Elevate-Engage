@@ -1,40 +1,131 @@
 import React from "react";
 import Input from "../component/Input";
+import { useFormik } from "formik";
+import { number, object, string } from "yup";
+
+let contactFormValidationSchema = object({
+  name: string()
+    .max(30, "Name can not be greater than 10 charecter")
+    .required("Name is Required"),
+  email: string().email("Invalid Email").required("Email is Required"),
+  company: string()
+    .required("Company is Rewuired")
+    .max(20, "Not More That 20 Charecter"),
+  phone: number().required().positive().integer(),
+  message: string().max(100, "Not more thatn 100 charecter"),
+});
 
 function Contact() {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      message: "",
+    },
+    validationSchema: contactFormValidationSchema,
+    onSubmit: (values, { setSubmitting, resetForm }) => {
+      console.log(JSON.stringify(values));
+      setSubmitting(true);
+      setTimeout(() => {
+        setSubmitting(false);
+        console.log("makinf is submiting false");
+        resetForm();
+      }, 2000);
+    },
+  });
+
+  const {
+    handleChange,
+    handleSubmit,
+    values,
+    errors,
+    touched,
+    isValid,
+    isSubmitting,
+  } = formik;
+
   return (
     <section className="bg-base-200 text-base-content border-b-1 border-gray-800">
       <div className="section width">
         <div className="">
           <div className="lg:mb-8">
-            <h2 className="subtitle leading-tight">
-              Contact us
-            </h2>
-            <p className="mt-1 text-lighter">Whatever your goal - we will get you there.</p>
+            <h2 className="subtitle leading-tight">Contact us</h2>
+            <p className="mt-1 text-lighter">
+              Whatever your goal - we will get you there.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
             <div className="md:order-2 border-b border-neutral-800 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="space-y-4">
-                  <Input type="text" label="Name" />
-                  <Input type="email" label="Email" />
-                  <Input type="text" label="Company" />
-                  <Input type="number" label="Phone" />
-                  <Input type="message" label="Tell Us About Your Project" />
+                  <Input
+                    type="text"
+                    label="Name"
+                    id="name"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                  />
+                  {errors.name ? (
+                    <p className="text-red-800 text-[14px]">{errors.name}</p>
+                  ) : null}
+                  <Input
+                    type="email"
+                    label="Email"
+                    id={"email"}
+                    name={"email"}
+                    value={values.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email ? (
+                    <p className="text-red-800 text-[14px]">{errors.email}</p>
+                  ) : null}
+                  <Input
+                    type="text"
+                    label="Company"
+                    id={"company"}
+                    name={"company"}
+                    value={values.company}
+                    onChange={handleChange}
+                  />
+                  {errors.company ? (
+                    <p className="text-red-800 text-[14px]">{errors.company}</p>
+                  ) : null}
+                  <Input
+                    type="number"
+                    label="Phone"
+                    id={"phone"}
+                    name={"phone"}
+                    value={values.phone}
+                    onChange={handleChange}
+                  />
+                  {errors.number ? (
+                    <p className="text-red-800 text-[14px]">{errors.number}</p>
+                  ) : null}
+                  <Input
+                    type="message"
+                    label="Tell Us About Your Project"
+                    id={"message"}
+                    name={"message"}
+                    value={values.message}
+                    onChange={handleChange}
+                  />
+                  {errors.message ? (
+                    <p className="text-red-800 text-[14px]">{errors.message}</p>
+                  ) : null}
                 </div>
 
                 <div className="mt-2">
-                  <p className="text-xs text-neutral-500">
-                    All fields are required
-                  </p>
-
                   <p className="mt-5">
-                    <a
-                      className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
-                      href="#"
+                    <button
+                      type="submit"
+                      className="cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
+                      disabled={!isValid || isSubmitting}
                     >
-                      Submit
+                      {isSubmitting ? "Submitting...." : "Submit"}
                       <svg
                         className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-hover:translate-x-0 group-focus:translate-x-0.5 group-focus:translate-x-0"
                         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +141,7 @@ function Contact() {
                         <path d="M5 12h14" />
                         <path d="m12 5 7 7-7 7" />
                       </svg>
-                    </a>
+                    </button>
                   </p>
                 </div>
               </form>
