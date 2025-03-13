@@ -3,6 +3,8 @@ import Input from "../component/Input";
 import { useFormik } from "formik";
 import { number, object, string } from "yup";
 import emailjs  from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 
 // Yup Validation Schema
 let contactFormValidationSchema = object({
@@ -17,16 +19,9 @@ let contactFormValidationSchema = object({
   message: string().max(100, "Not more thatn 100 charecter"),
 });
 
-  // const onSubmit = (values, { setSubmitting, resetForm }) => {
-  //   console.log(values);
-  //   setSubmitting(true);
-  //   sendEmail(templateParms);
-  //   setSubmitting(false);
-  //   resetForm();
-  // };
 
 // Send EMail WIth Email.js
-const sendEmail = (templateParms) => {
+const sendEmail = async (templateParms) => {
   const serviceId = import.meta.env.VITE_SERVICE_ID;
   const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLICK_KEY;
@@ -43,20 +38,32 @@ const sendEmail = (templateParms) => {
     },
   });
 
-  emailjs.send(serviceId, templateId, templateParms)
-    .then((response) => {
-      console.log(response);
-      alert("Email Send SuccessFully")
-    })
-    .catch(err =>{
-      alert("Failed to send email", err)
-    })
-    .finally(()=>{
-      alert(" email sending funtion is end")
-    })
+  // emailjs.send(serviceId, templateId, templateParms)
+  //   .then((response) => {
+  //     console.log(response);
+  //     alert("Email Send SuccessFully")
+  //   })
+  //   .catch(err =>{
+  //     alert("Failed to send email", err)
+  //   })
+  //   .finally(()=>{
+  //     alert(" email sending funtion is end")
+  //   })
+
+   try {
+    toast.info("📩 Sending email...", { autoClose: 2000 }); // Show "Sending..." toast
+    const response = await emailjs.send(serviceId, templateId, templateParms);
+    console.log(response);
+    toast.success("✅ Email sent successfully!", { autoClose: 3000 }); // Show success toast
+  } catch (err) {
+    console.error("Email sending failed", err);
+    toast.error("❌ Failed to send email. Try again!", { autoClose: 3000 }); // Show error toast
+  }
+
 };
 
 function Contact() {
+  // initilize useFormik Hook
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -69,13 +76,12 @@ function Contact() {
     onSubmit: (values, { setSubmitting, resetForm }) => {
       console.log(values);
       setSubmitting(true);
-      sendEmail(templateParms);
-      setSubmitting(false);
-      resetForm();
+      sendEmail(templateParms).finally(()=>{
+        setSubmitting(false)
+        resetForm()
+      })
     },
   });
-
-
 
   // Destructure formik State
   const {
@@ -87,6 +93,7 @@ function Contact() {
     isValid,
     isSubmitting,
   } = formik;
+  
   // Email Js Template Params
   const templateParms = {
     email: values.email,
