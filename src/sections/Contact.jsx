@@ -2,18 +2,59 @@ import React from "react";
 import Input from "../component/Input";
 import { useFormik } from "formik";
 import { number, object, string } from "yup";
+import emailjs  from "@emailjs/browser";
 
+// Yup Validation Schema
 let contactFormValidationSchema = object({
   name: string()
     .max(30, "Name can not be greater than 10 charecter")
     .required("Name is Required"),
   email: string().email("Invalid Email").required("Email is Required"),
   company: string()
-    .required("Company is Rewuired")
+    .required("Company is Required")
     .max(20, "Not More That 20 Charecter"),
   phone: number().required().positive().integer(),
   message: string().max(100, "Not more thatn 100 charecter"),
 });
+
+  // const onSubmit = (values, { setSubmitting, resetForm }) => {
+  //   console.log(values);
+  //   setSubmitting(true);
+  //   sendEmail(templateParms);
+  //   setSubmitting(false);
+  //   resetForm();
+  // };
+
+// Send EMail WIth Email.js
+const sendEmail = (templateParms) => {
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLICK_KEY;
+
+  emailjs.init({
+    publicKey: publicKey,
+    // Do not allow headless browsers
+    blockHeadless: true,
+    limitRate: {
+      // Set the limit rate for the application
+      id: "app",
+      // Allow 1 request per 5s
+      throttle: 5000,
+    },
+  });
+
+  emailjs.send(serviceId, templateId, templateParms)
+    .then((response) => {
+      console.log(response);
+      alert("Email Send SuccessFully")
+    })
+    .catch(err =>{
+      alert("Failed to send email", err)
+    })
+    .finally(()=>{
+      alert(" email sending funtion is end")
+    })
+};
 
 function Contact() {
   const formik = useFormik({
@@ -26,16 +67,17 @@ function Contact() {
     },
     validationSchema: contactFormValidationSchema,
     onSubmit: (values, { setSubmitting, resetForm }) => {
-      console.log(JSON.stringify(values));
+      console.log(values);
       setSubmitting(true);
-      setTimeout(() => {
-        setSubmitting(false);
-        console.log("makinf is submiting false");
-        resetForm();
-      }, 2000);
+      sendEmail(templateParms);
+      setSubmitting(false);
+      resetForm();
     },
   });
 
+
+
+  // Destructure formik State
   const {
     handleChange,
     handleSubmit,
@@ -45,6 +87,13 @@ function Contact() {
     isValid,
     isSubmitting,
   } = formik;
+  // Email Js Template Params
+  const templateParms = {
+    email: values.email,
+    name: values.name,
+    subject: `Thank You For Your Inquery ${values.name}`,
+    message: values.message,
+  };
 
   return (
     <section className="bg-base-200 text-base-content border-b-1 border-gray-800">
