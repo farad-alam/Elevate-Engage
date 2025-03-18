@@ -41,11 +41,13 @@ function HeroContent() {
           TikTok!
         </p>
       </div>
-      <Button
-        type="button"
-        text="WhatsApp"
-        className=" bg-brand text-black my-btn btnhover "
-      />
+      <a
+        href="https://wa.link/xzqjqc"
+        target="blank"
+        className=" bg-brand text-black my-btn inline-block btnhover"
+      >
+        WhatsApp
+      </a>
     </div>
   );
 }

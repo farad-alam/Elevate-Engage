@@ -61,7 +61,7 @@ function PriceCard({
           </div>
 
           <a
-            href="#"
+            href="#contact-us"
             className="block rounded-lg  px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 main-pricing-btn focus-visible:ring  md:text-base"
           >
             {buttonTxt}

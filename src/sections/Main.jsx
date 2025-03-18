@@ -11,7 +11,7 @@ function Main() {
   return (
     <>
     <Services />
-    <AditionaServices />
+    {/* <AditionaServices /> */}
     <Pricing />
     <Testimonial />
     <FAQ />

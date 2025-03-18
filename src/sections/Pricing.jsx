@@ -20,7 +20,7 @@ function Pricing() {
 
   return (
     <>
-      <section data-theme="" className="bg-base-100 text-base-content">
+      <section id="pricing" data-theme="" className="bg-base-100 text-base-content">
         <div className="width section">
           <h2 className="subtitle text-center mb-14">
             <SplitTextComponent text={"Our plans for you"} />

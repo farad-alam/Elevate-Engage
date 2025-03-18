@@ -103,7 +103,10 @@ function Contact() {
   };
 
   return (
-    <section className="bg-base-200 text-base-content border-b-1 border-gray-800">
+    <section
+      id="contact-us"
+      className="bg-base-200 text-base-content border-b-1 border-gray-800"
+    >
       <div className="section width">
         <div className="">
           <div className="lg:mb-8">
@@ -254,7 +257,7 @@ function Contact() {
                     href="#mailto:example@site.co"
                     target="_blank"
                   >
-                    hello@example.so
+                    admin@elevateengage.net
                   </a>
                 </div>
               </div>

@@ -9,7 +9,7 @@
       "Basic analytics report",
       "Email support"
     ],
-    "price": 29,
+    "price": 99,
     "buttonTxt":"Take Package",
     "isMain": false
   },
@@ -23,7 +23,7 @@
       "Detailed growth analytics",
       "Priority email & chat support"
     ],
-    "price": 79,
+    "price": 199,
     "buttonTxt":"Take Package",
     "isMain": true
   },
@@ -37,7 +37,7 @@
       "Competitor analysis",
       "24/7 premium support"
     ],
-    "price": 149,
+    "price": 299,
     "buttonTxt": "Take Package",
     "isMain": false
   }

@@ -5,7 +5,7 @@ import AnimateComponent from "../DesignComponent/AnimateComponent";
 import SplitTextComponent from "../DesignComponent/SplitTextComponent";
 function Testimonial() {
   return (
-    <section data-theme="" className="bg-base-200">
+    <section id="testimonial" data-theme="" className="bg-base-200">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 section width">
         <div className="flex flex-col items-center">
           {/* User Feedback Heading */}

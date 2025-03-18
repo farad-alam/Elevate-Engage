@@ -10,7 +10,7 @@ import SplitTextComponent from "../DesignComponent/SplitTextComponent";
 
 function Services() {
   return (
-    <section className="bg-base-300">
+    <section id="services" className="bg-base-300">
       <div id="services" className="width section">
         <h2 className="subtitle mb-12 text-center">
           <SplitTextComponent

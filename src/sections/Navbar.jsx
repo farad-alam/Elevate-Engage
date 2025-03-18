@@ -1,5 +1,5 @@
-import React from 'react'
-import Button from '../component/Button';
+import React from "react";
+import Button from "../component/Button";
 
 function Navbar() {
   return (
@@ -60,32 +60,33 @@ function Navbar() {
               <a className="font-semibold">Home</a>
             </li>
             <li>
-              <a>Srvices</a>
+              <a href="#services">Srvices</a>
             </li>
             <li>
-              <a>Pricing</a>
+              <a href="#pricing">Pricing</a>
             </li>
             <li>
-              <a>Client Success</a>
+              <a href="#testimonial">Client Success</a>
             </li>
             <li>
               <a>About</a>
             </li>
             <li>
-              <a>FAQ</a>
+              <a href="#faq">FAQ</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <Button
-            type="button"
-            text="Contact Us"
-            className=" bg-brand text-black my-btn btnhover"
-          />
+          <a
+            href="#contact-us"
+            className=" bg-brand text-black my-btn inline-block btnhover"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </>
   );
 }
 
-export default Navbar
+export default Navbar;
