@@ -21,9 +21,18 @@ let contactFormValidationSchema = object({
 
 
 // Send EMail WIth Email.js
-const sendEmail = async (templateParms) => {
+const sendEmail = async (templateParms, isUser) => {
+  var templateId;
+  if (isUser) {
+    // user template
+    templateId = import.meta.env.VITE_TEMPLATE_ID_FOR_AUTO_REPLY;
+  } else {
+    // admin template id
+    templateId = import.meta.env.VITE_TEMPLATE_ID;
+  }
   const serviceId = import.meta.env.VITE_SERVICE_ID;
-  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  // var templateId = import.meta.env.VITE_TEMPLATE_ID_FOR_AUTO_REPLY;
+  // const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLICK_KEY;
 
   emailjs.init({
@@ -41,23 +50,23 @@ const sendEmail = async (templateParms) => {
   // emailjs.send(serviceId, templateId, templateParms)
   //   .then((response) => {
   //     console.log(response);
-  //     alert("Email Send SuccessFully")
+      
   //   })
   //   .catch(err =>{
-  //     alert("Failed to send email", err)
+      
   //   })
   //   .finally(()=>{
-  //     alert(" email sending funtion is end")
+      
   //   })
 
    try {
-    toast.info("📩 Sending email...", { autoClose: 2000 }); // Show "Sending..." toast
+    isUser && toast.info("📩 Sending email...", { autoClose: 2000 }); // Show "Sending..." toast
     const response = await emailjs.send(serviceId, templateId, templateParms);
-    console.log(response);
-    toast.success("✅ Email sent successfully!", { autoClose: 3000 }); // Show success toast
+    // console.log(response);
+    isUser && toast.success("✅ Email sent successfully!", { autoClose: 3000 }); // Show success toast
   } catch (err) {
-    console.error("Email sending failed", err);
-    toast.error("❌ Failed to send email. Try again!", { autoClose: 3000 }); // Show error toast
+    // console.error("Email sending failed", err);
+    isUser && toast.error("❌ Failed to send email. Try again!", { autoClose: 3000 }); // Show error toast
   }
 
 };
@@ -76,10 +85,13 @@ function Contact() {
     onSubmit: (values, { setSubmitting, resetForm }) => {
       console.log(values);
       setSubmitting(true);
-      sendEmail(templateParms).finally(()=>{
+      // Send mail to user
+      sendEmail(templateParms, true).finally(()=>{
         setSubmitting(false)
         resetForm()
       })
+      // send mail admin
+     sendEmail(templateParmsForAdmin, false)
     },
   });
 
@@ -98,8 +110,19 @@ function Contact() {
   const templateParms = {
     email: values.email,
     name: values.name,
-    subject: `Thank You For Your Inquery ${values.name}`,
+    subject: `We’ve received your message ${values.name}`,
     message: values.message,
+  };
+  // Email Js Template Params for admin
+  const templateParmsForAdmin = {
+    email: "farad.alamall@gmail.com",
+    // email: "mahasan509@gmail.com",
+    name: "Abul Hasan",
+    userName: values.name,
+    subject: `Query From Elevate Engage User- ${values.name}`,
+    message: `${values.message}
+    user Email: ${values.email}
+    `,
   };
 
   return (
