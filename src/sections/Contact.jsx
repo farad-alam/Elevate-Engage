@@ -115,8 +115,8 @@ function Contact() {
   };
   // Email Js Template Params for admin
   const templateParmsForAdmin = {
-    email: "farad.alamall@gmail.com",
-    // email: "mahasan509@gmail.com",
+    // email: "farad.alamall@gmail.com",
+    email: "mahasan509@gmail.com",
     name: "Abul Hasan",
     userName: values.name,
     subject: `Query From Elevate Engage User- ${values.name}`,
